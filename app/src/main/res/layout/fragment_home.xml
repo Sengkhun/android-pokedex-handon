@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pokedex :)"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click a Pokemon to read the detail" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/arbok"
+                android:tag="arbok"
+                tools:ignore="OnClick" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/blastoise"
+                android:tag="blastoise" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/bulbasaur"
+                android:tag="bulbasaur" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/caterpie"
+                android:tag="caterpie" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/charizard"
+                android:tag="charizard" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/nidoqueen"
+                android:tag="nidoqueen" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/pidgeotto"
+                android:tag="pidgeotto" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/pikachu"
+                android:tag="pikachu" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/rattata"
+                android:tag="rattata" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/spearow"
+                android:tag="spearow" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/squirtle"
+                android:tag="squirtle" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="pokedexClick"
+                android:src="@drawable/venusaur"
+                android:tag="venusaur" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
