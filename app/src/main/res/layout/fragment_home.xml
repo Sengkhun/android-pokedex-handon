@@ -3,128 +3,154 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pokedex :)"
-        android:textSize="24sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click a Pokemon to read the detail" />
-
-    <TableLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:stretchColumns="*">
+        android:layout_height="wrap_content">
 
-        <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <ImageView
-                android:layout_width="0dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/arbok"
-                android:tag="arbok"
-                tools:ignore="OnClick" />
+                android:text="Pokedex :)"
+                android:textSize="24sp" />
 
-            <ImageView
-                android:layout_width="0dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/blastoise"
-                android:tag="blastoise" />
+                android:text="Click a Pokemon to read the detail" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/bulbasaur"
-                android:tag="bulbasaur" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:stretchColumns="*">
 
-        </TableRow>
+                <TableRow>
 
-        <TableRow>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/arbok"
+                        android:tag="arbok"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/caterpie"
-                android:tag="caterpie" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/blastoise"
+                        android:tag="blastoise"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/charizard"
-                android:tag="charizard" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/bulbasaur"
+                        android:tag="bulbasaur"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/nidoqueen"
-                android:tag="nidoqueen" />
+                </TableRow>
 
-        </TableRow>
+                <TableRow>
 
-        <TableRow>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/caterpie"
+                        android:tag="caterpie"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/pidgeotto"
-                android:tag="pidgeotto" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/charizard"
+                        android:tag="charizard"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/pikachu"
-                android:tag="pikachu" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/nidoqueen"
+                        android:tag="nidoqueen"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/rattata"
-                android:tag="rattata" />
+                </TableRow>
 
-        </TableRow>
+                <TableRow>
 
-        <TableRow>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/pidgeotto"
+                        android:tag="pidgeotto"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/spearow"
-                android:tag="spearow" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/pikachu"
+                        android:tag="pikachu"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/squirtle"
-                android:tag="squirtle" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/rattata"
+                        android:tag="rattata"
+                        tools:ignore="OnClick" />
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:onClick="pokedexClick"
-                android:src="@drawable/venusaur"
-                android:tag="venusaur" />
+                </TableRow>
 
-        </TableRow>
+                <TableRow>
 
-    </TableLayout>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/spearow"
+                        android:tag="spearow"
+                        tools:ignore="OnClick" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/squirtle"
+                        android:tag="squirtle"
+                        tools:ignore="OnClick" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="pokedexClick"
+                        android:src="@drawable/venusaur"
+                        android:tag="venusaur"
+                        tools:ignore="OnClick" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -19,25 +19,16 @@ import java.util.Scanner;
  */
 public class DetailFragment extends Fragment {
 
+    private int imageId, descriptionId;
     private String name;
-    private int id, descriptionId;
-    private ImageView image;
-    private TextView description;
 
     public DetailFragment() {
-        // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        name = getArguments().getString("name");
-        id = getArguments().getInt("id");
-        descriptionId = getArguments().getInt("descriptionId");
-
-        // Inflate the layout for this fragment
+        getArgument();
         return inflater.inflate(R.layout.fragment_detail, container, false);
     }
 
@@ -45,15 +36,66 @@ public class DetailFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        image = getActivity().findViewById(R.id.pokedex_image);
-        description = getActivity().findViewById(R.id.pokedex_description);
+        if (savedInstanceState != null) {
 
-        image.setImageResource( id );
+            name = savedInstanceState.getString("name");
+            imageId = savedInstanceState.getInt("imageId");
+            descriptionId = savedInstanceState.getInt("descriptionId");
 
-        InputStream source = getResources().openRawResource(descriptionId);
-        Scanner scan = new Scanner(source);
+        } else {
 
-        description.setText( scan.nextLine() );
+            refresh();
+
+        }
 
     }
+
+    public void getArgument() {
+
+        name = getArguments().getString("name");
+        imageId = getArguments().getInt("imageId");
+        descriptionId = getArguments().getInt("descriptionId");
+
+    }
+
+    public void setContentToView() {
+
+        TextView nameText = getActivity().findViewById(R.id.pokedex_name);
+        ImageView image = getActivity().findViewById(R.id.pokedex_image);
+        TextView descriptionText = getActivity().findViewById(R.id.pokedex_description);
+
+        if (imageId != 0) { // Have arguments
+
+            String description = "";
+            nameText.setText(name);
+            image.setImageResource(imageId);
+
+            InputStream source = getResources().openRawResource(descriptionId);
+            Scanner scan = new Scanner(source);
+
+            while (scan.hasNext()) {
+                description += scan.nextLine();
+            }
+
+            descriptionText.setText(description);
+
+        }
+
+    }
+
+    public void refresh() {
+
+        getArgument();
+        setContentToView();
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("name", name);
+        outState.putInt("imageId", imageId);
+        outState.putInt("descriptionId", descriptionId);
+    }
+
 }

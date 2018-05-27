@@ -4,7 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".DetailFragment">
+
+    <TextView
+        android:id="@+id/pokedex_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/pokedex_image"
