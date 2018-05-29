@@ -36,17 +36,7 @@ public class DetailFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        if (savedInstanceState != null) {
-
-            name = savedInstanceState.getString("name");
-            imageId = savedInstanceState.getInt("imageId");
-            descriptionId = savedInstanceState.getInt("descriptionId");
-
-        } else {
-
-            refresh();
-
-        }
+        if (savedInstanceState == null) refresh();
 
     }
 
@@ -88,14 +78,6 @@ public class DetailFragment extends Fragment {
         getArgument();
         setContentToView();
 
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString("name", name);
-        outState.putInt("imageId", imageId);
-        outState.putInt("descriptionId", descriptionId);
     }
 
 }
